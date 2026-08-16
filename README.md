@@ -44,16 +44,19 @@ promptfoo-review-sentiment-eval
 ├── tests/
 │   └── review_test_data.json  # 15 hand-labeled gold test cases
 ├── .env                      # API keys 
-├── results.html # 
+├── results.html              # Visual eval report (open in browser)
 └── README.md
 
 ```
 
 
-## 📊 Test Set
+## 📊 Test Set & Results
 
 15 hand-labeled reviews covering distinct difficulty types: clean single/multi-category, mixed sentiment across categories, vague/no-topic reviews, sarcasm, purely factual/neutral statements, 
 category-adjacent confusion (price vs. quality overlap), and a topic-outside-the-list case (payment methods).
+
+[View the full interactive results report](https://swatijanapana.github.io/promptfoo-review-sentiment-eval/results.html)
+
 
 ## Providers compared
 
