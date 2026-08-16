@@ -1,0 +1,108 @@
+[
+  {
+    "vars": {
+      "review_text": "The build quality is excellent, very sturdy and well made.",
+      "expected_categories": [ "Product Quality"],
+      "expected_sentiment": "Positive"
+   }
+},
+
+  {
+    "vars": {
+      "review_text": "Support team resolved my issue in minutes, very helpful.",
+      "expected_categories": ["Customer Service"],
+      "expected_sentiment": "Positive"
+  }
+    },
+  {
+    "vars": {
+      "review_text": "Fast shipping and the product works great.",
+     "expected_categories": ["Shipping & Delivery","Product Quality"],
+     "expected_sentiment": "Positive"
+  }  
+},
+  {
+    "vars": {
+      "review_text": "Nicely packaged and easy to set up right out of the box.",
+      "expected_categories": ["Packaging","Usability / Ease of Use"],
+      "expected_sentiment": "Positive"
+  }
+},
+  {
+    "vars": {
+      "review_text": "Product quality is amazing but customer service was terrible when I tried to return it.",
+      "expected_categories": ["Product Quality","Customer Service"],
+      "expected_sentiment": "Negative"
+  }
+  },
+  {
+    "vars": {
+      "review_text": "Great price, but honestly the material feels cheap for what I paid.",
+      "expected_categories": ["Pricing & Value","Product Quality"],
+      "expected_sentiment": "Negative"
+  }
+   },
+  {
+    "vars": {
+      "review_text": "Not good.",
+      "expected_categories": [ "Other"],
+      "expected_sentiment": "Negative"
+  }
+   },
+  {
+    "vars": {
+      "review_text": "Terrible experience overall.",
+      "expected_categories": [ "Other"],
+      "expected_sentiment": "Negative"
+  }
+   },
+  {
+    "vars": {
+      "review_text": "Oh great, another broken item, exactly what I wanted." ,
+     "expected_categories": ["Product Quality"],
+     "expected_sentiment": "Negative"
+  }
+  },
+  {
+    "vars": {
+      "review_text": "Wow, five days for a two-day shipping option, impressive.",
+      "expected_categories": [ "Shipping & Delivery"],
+      "expected_sentiment": "Negative"
+  }
+  },
+  {
+    "vars": {
+      "review_text": "Arrived in a red box, took 5 days to reach me.",
+      "expected_categories": [ "Packaging","Shipping & Delivery"],
+      "expected_sentiment": "Neutral"
+  }
+   },
+  {
+    "vars": {
+      "review_text": "It's a 12-inch item, comes in a size medium and small variant.",
+      "expected_categories": ["Other"],
+      "expected_sentiment": "Neutral"
+  }
+    },
+  {
+    "vars": {
+      "review_text": "Price was okay but not really worth it for this build quality.",
+      "expected_categories": [ "Pricing & Value","Product Quality"],
+      "expected_sentiment": "Negative"
+  }
+  },
+  {
+    "vars": {
+      "review_text": "A bit expensive, but honestly you get what you pay for - quality is solid.",
+      "expected_categories": [ "Pricing & Value","Product Quality" ],
+      "expected_sentiment": "Positive"
+  }
+  },
+  {
+    "vars": {
+      "review_text": "Payment issue - they don't accept cash, only card payments allowed.",
+      "expected_categories": ["Not specified"],
+      "expected_sentiment": "Negative"
+  }
+ }
+]

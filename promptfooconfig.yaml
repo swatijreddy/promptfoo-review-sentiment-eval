@@ -1,0 +1,49 @@
+description: "Customer  Review Analyzer"
+
+prompts:
+     - file://review_classifier.md
+    
+providers: 
+  - id: google:gemini-3.5-flash-lite
+    config:
+      max_tokens: 500
+      temperature: 0
+  - id: anthropic:messages:claude-haiku-4-5-20251001
+    config:
+      max_tokens: 500
+      temperature: 0
+  - id: openai:gpt-4.1-mini
+    config:
+      max_tokens: 500
+      temperature: 0
+
+tests: file://tests/review_test_data.json
+  
+defaultTest:
+  options:
+    provider:
+        id: google:gemini-3.5-flash-lite
+    disableVarExpansion: true
+  assert:
+    - type: is-json
+      value:
+        required: 
+            - categories
+            - sentiment
+        type: object
+        properties: 
+            categories: 
+             type: array
+            sentiment: 
+             type: string
+    - type: llm-rubric
+      value: "The output is a JSON object containing exactly these two keys:categories and sentiment. 
+              Fail if any key is missing, renamed, or uses any values outside categories and sentiment."
+    - type: llm-rubric
+      value: 'Check the values inside the categories field. Valid values are either: (1) one of these seven categories: ["Product Quality", "Customer Service", "Shipping & Delivery", "Packaging", "Usability / Ease of Use", "Pricing & Value", "Other"], or (2) the exact string "Not specified", 
+              used only when no listed category applies. Fail if any value is neither of these.
+              Check the values inside the sentiment field.Valid values for sentiment :["Positive", "Negative", "Neutral"]'
+    - type: llm-rubric
+      value: "Compare the model's output against the correct answer for this review. Correct categories: {{expected_categories}}. Correct sentiment: {{expected_sentiment}}. 
+             Fail if the model's categories don't match the correct categories (order doesn't matter), or if sentiment doesn't match exactly."
+    
